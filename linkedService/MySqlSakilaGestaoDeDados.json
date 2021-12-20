@@ -1,0 +1,16 @@
+{
+	"name": "MySqlSakilaGestaoDeDados",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureMySql",
+		"typeProperties": {
+			"connectionString": "server=aula02.mysql.database.azure.com;port=3306;database=sakila;uid=augusto@aula02;sslmode=1;usesystemtruststore=0",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIwYTM0ODkzNy1mMjE1LTQxN2YtODc1Zi0xZGZkNGM3NWZjMmMiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntime01",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
