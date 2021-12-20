@@ -60,12 +60,20 @@
 							"typeProperties": {
 								"source": {
 									"type": "AzureMySqlSource",
+									"additionalColumns": {
+										"type": "Expression",
+										"value": "@item().table_name"
+									},
 									"queryTimeout": "02:00:00"
 								},
 								"sink": {
-									"type": "AzureMySqlSink",
-									"writeBatchSize": 10000,
-									"writeBatchTimeout": "00:00:30"
+									"type": "ParquetSink",
+									"storeSettings": {
+										"type": "AzureBlobFSWriteSettings"
+									},
+									"formatSettings": {
+										"type": "ParquetWriteSettings"
+									}
 								},
 								"enableStaging": false,
 								"translator": {
@@ -85,7 +93,7 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "AzureMySqlTable01",
+									"referenceName": "Parquet01",
 									"type": "DatasetReference"
 								}
 							]
