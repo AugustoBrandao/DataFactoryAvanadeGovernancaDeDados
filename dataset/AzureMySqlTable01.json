@@ -1,0 +1,12 @@
+{
+	"name": "AzureMySqlTable01",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "MySqlSakilaGestaoDeDados",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureMySqlTable",
+		"schema": []
+	}
+}
